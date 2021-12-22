@@ -18,7 +18,43 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 //cspell: enable
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
+  const ul = document.createElement('ul');
+  ul.style.display = 'flex';
+  ul.style.listStyle = 'none';
+  ul.style.justifyContent = 'space-around';
+  ul.style.alignItems = 'center';
+  const imgRoutes = [
+    './assets/the_design_of_everyday_things.jpg',
+    './assets/the_most_human_human.jpg',
+    './assets/the_pragmatic_programmer.jpg',
+  ];
+  books.forEach(function (book, i) {
+    const { title, author, alreadyRead } = book;
+    const li = document.createElement('li');
+    const img = document.createElement('img');
+    img.src = imgRoutes[i];
+
+    const paragraph = document.createElement('p');
+    paragraph.textContent = `${title}-${author} `;
+    li.appendChild(paragraph);
+    li.appendChild(img);
+    alreadyRead
+      ? (li.style.background = 'green')
+      : (li.style.background = 'red');
+    ul.appendChild(li);
+
+    //styling
+
+    li.style.display = 'flex';
+    li.style.flexDirection = 'column';
+    li.style.justifyContent = 'center';
+    li.style.alignItems = 'center';
+    li.style.padding = '1rem';
+    paragraph.style.color = 'white';
+    paragraph.style.fontWeight = '600';
+    img.style.width = '100%';
+  });
+  return ul;
 }
 
 function main() {
