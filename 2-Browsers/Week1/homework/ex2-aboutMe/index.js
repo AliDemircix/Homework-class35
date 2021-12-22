@@ -9,5 +9,15 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 3. In JavaScript, iterate through each `<li>` and change the class to 
    `list-item`.
 ------------------------------------------------------------------------------*/
-
-// TODO add your JavaScript code here.
+const body = document.querySelector('body');
+body.style.fontFamily = 'Arial, sans-serif';
+const nickName = document.querySelector('#nickname');
+nickName.textContent = 'Ali Demirci';
+const favFood = document.querySelector('#fav-food');
+favFood.textContent = 'Pizza';
+const homeTown = document.querySelector('#hometown');
+homeTown.textContent = 'Turkey';
+const liList = document.querySelectorAll('li');
+liList.forEach(function (li) {
+  li.classList.add('list-item');
+});

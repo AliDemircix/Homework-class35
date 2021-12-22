@@ -20,6 +20,7 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 function createBookList(books) {
   const ul = document.createElement('ul');
   ul.style.display = 'flex';
+  ul.style.flexWrap = 'wrap';
   ul.style.listStyle = 'none';
   ul.style.justifyContent = 'space-around';
   ul.style.alignItems = 'center';
@@ -32,15 +33,15 @@ function createBookList(books) {
     const { title, author, alreadyRead } = book;
     const li = document.createElement('li');
     const img = document.createElement('img');
-    img.src = imgRoutes[i];
-
     const paragraph = document.createElement('p');
-    paragraph.textContent = `${title}-${author} `;
     li.appendChild(paragraph);
     li.appendChild(img);
+    img.src = imgRoutes[i];
+    paragraph.textContent = `${title}-${author} `;
     alreadyRead
       ? (li.style.background = 'green')
       : (li.style.background = 'red');
+
     ul.appendChild(li);
 
     //styling
