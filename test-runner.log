@@ -277,3 +277,272 @@ Command failed: npx jest ex5-wallet.test.js --colors --reporters="C:\Users\pc\De
 2021-12-20 12:24:45 info: --------------------------------------
 2021-12-20 12:24:48 info: All unit tests passed.
 2021-12-20 12:24:51 info: All steps were completed successfully
+2021-12-22 10:12:53 info: ----------------------------------------
+2021-12-22 10:12:53 info: >>> Running Unit Test `ex1-bookList` <<<
+2021-12-22 10:12:53 info: ----------------------------------------
+2021-12-22 10:13:00 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js
+  Generated HTML
+    × HTML should be syntactically valid (112 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ should contain a <ul> that is a child of <div id="bookList"> (1 ms)
+    √ should contain a <ul> with 3 <li> elements (1 ms)
+    √ should contain an <li> with title and author for each book of the `myBooks` array (2 ms)
+    √ should contain an <img> element for each book
+
+  ● Generated HTML › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      10:356  error  <img> is missing required \"alt\" attribute  wcag/h37
+      10:651  error  <img> is missing required \"alt\" attribute  wcag/h37
+      10:937  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 3 problems (3 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:42:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        3.526 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+2021-12-22 10:15:14 info: ----------------------------------------
+2021-12-22 10:15:14 info: >>> Running Unit Test `ex1-bookList` <<<
+2021-12-22 10:15:14 info: ----------------------------------------
+2021-12-22 10:15:20 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js
+  Generated HTML
+    × HTML should be syntactically valid (103 ms)
+    √ should have all TODO comments removed
+    √ should contain a <ul> that is a child of <div id="bookList"> (1 ms)
+    √ should contain a <ul> with 3 <li> elements (1 ms)
+    √ should contain an <li> with title and author for each book of the `myBooks` array (1 ms)
+    √ should contain an <img> element for each book (1 ms)
+
+  ● Generated HTML › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      10:356  error  <img> is missing required \"alt\" attribute  wcag/h37
+      10:651  error  <img> is missing required \"alt\" attribute  wcag/h37
+      10:937  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 3 problems (3 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:42:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        3.098 s, estimated 4 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+2021-12-22 10:17:27 info: ----------------------------------------
+2021-12-22 10:17:27 info: >>> Running Unit Test `ex1-bookList` <<<
+2021-12-22 10:17:27 info: ----------------------------------------
+2021-12-22 10:17:33 info: All unit tests passed.
+2021-12-22 10:17:37 info: All steps were completed successfully
+2021-12-22 10:57:28 info: ---------------------------------------
+2021-12-22 10:57:28 info: >>> Running Unit Test `ex5-catWalk` <<<
+2021-12-22 10:57:28 info: ---------------------------------------
+2021-12-22 10:57:34 info: All unit tests passed.
+2021-12-22 10:57:38 info: All steps were completed successfully
+2021-12-22 10:58:00 info: ---------------------------------------
+2021-12-22 10:58:00 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2021-12-22 10:58:00 info: ---------------------------------------
+2021-12-22 10:58:05 info: All unit tests passed.
+2021-12-22 10:58:09 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:15:29 - Unknown word (Demirci)
+
+2021-12-22 10:58:43 info: ---------------------------------------
+2021-12-22 10:58:43 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2021-12-22 10:58:43 info: ---------------------------------------
+2021-12-22 10:58:48 info: All unit tests passed.
+2021-12-22 10:58:52 info: All steps were completed successfully
+2021-12-22 11:06:49 info: ------------------------------------------
+2021-12-22 11:06:49 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2021-12-22 11:06:49 info: ------------------------------------------
+2021-12-22 11:06:51 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-hijackLogo.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js
+  hijackLogo
+    × should have all TODO comments removed (2 ms)
+    √ should set the `src` property
+    × should set the `srcset` property (1 ms)
+
+  ● hijackLogo › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● hijackLogo › should set the `srcset` property
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      33 |
+      34 |   test('should set the `srcset` property', () => {
+    > 35 |     expect(state.srcset).toBeDefined();
+         |                          ^
+      36 |   });
+      37 | });
+      38 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js:35:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.587 s
+Ran all test suites matching /ex3-hijackLogo.test.js/i.
+2021-12-22 11:07:34 info: ------------------------------------------
+2021-12-22 11:07:34 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2021-12-22 11:07:34 info: ------------------------------------------
+2021-12-22 11:07:37 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-hijackLogo.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js
+  hijackLogo
+    √ should have all TODO comments removed (1 ms)
+    √ should set the `src` property (1 ms)
+    × should set the `srcset` property (1 ms)
+
+  ● hijackLogo › should set the `srcset` property
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      33 |
+      34 |   test('should set the `srcset` property', () => {
+    > 35 |     expect(state.srcset).toBeDefined();
+         |                          ^
+      36 |   });
+      37 | });
+      38 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js:35:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.495 s, estimated 1 s
+Ran all test suites matching /ex3-hijackLogo.test.js/i.
+2021-12-22 11:11:11 info: ------------------------------------------
+2021-12-22 11:11:11 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2021-12-22 11:11:11 info: ------------------------------------------
+2021-12-22 11:11:14 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-hijackLogo.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js
+  hijackLogo
+    √ should have all TODO comments removed (1 ms)
+    × should set the `src` property (1 ms)
+    √ should set the `srcset` property
+
+  ● hijackLogo › should set the `src` property
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      29 |
+      30 |   test('should set the `src` property', () => {
+    > 31 |     expect(state.src).toBeDefined();
+         |                       ^
+      32 |   });
+      33 |
+      34 |   test('should set the `srcset` property', () => {
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js:31:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.506 s, estimated 1 s
+Ran all test suites matching /ex3-hijackLogo.test.js/i.
+2021-12-22 11:11:32 info: ------------------------------------------
+2021-12-22 11:11:32 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2021-12-22 11:11:32 info: ------------------------------------------
+2021-12-22 11:11:35 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-hijackLogo.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js
+  hijackLogo
+    √ should have all TODO comments removed (1 ms)
+    × should set the `src` property (1 ms)
+    √ should set the `srcset` property (1 ms)
+
+  ● hijackLogo › should set the `src` property
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      29 |
+      30 |   test('should set the `src` property', () => {
+    > 31 |     expect(state.src).toBeDefined();
+         |                       ^
+      32 |   });
+      33 |
+      34 |   test('should set the `srcset` property', () => {
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js:31:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.485 s, estimated 1 s
+Ran all test suites matching /ex3-hijackLogo.test.js/i.
+2021-12-22 11:12:14 info: ------------------------------------------
+2021-12-22 11:12:14 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2021-12-22 11:12:14 info: ------------------------------------------
+2021-12-22 11:12:17 info: All unit tests passed.
+2021-12-22 11:12:20 info: All steps were completed successfully
+2021-12-22 11:40:46 info: --------------------------------------------
+2021-12-22 11:40:47 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2021-12-22 11:40:47 info: --------------------------------------------
+2021-12-22 11:40:54 info: All unit tests passed.
+2021-12-22 11:40:58 info: All steps were completed successfully

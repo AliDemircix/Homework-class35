@@ -54,6 +54,7 @@ function createBookList(books) {
     paragraph.style.color = 'white';
     paragraph.style.fontWeight = '600';
     img.style.width = '100%';
+    img.alt = 'book';
   });
   return ul;
 }

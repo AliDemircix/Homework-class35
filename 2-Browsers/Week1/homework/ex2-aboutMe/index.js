@@ -12,7 +12,7 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 const body = document.querySelector('body');
 body.style.fontFamily = 'Arial, sans-serif';
 const nickName = document.querySelector('#nickname');
-nickName.textContent = 'Ali Demirci';
+nickName.textContent = 'Ally';
 const favFood = document.querySelector('#fav-food');
 favFood.textContent = 'Pizza';
 const homeTown = document.querySelector('#hometown');
