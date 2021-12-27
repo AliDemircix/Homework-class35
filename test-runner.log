@@ -56,3 +56,18 @@ ex6-totalCost.js
 2021-12-16 04:15:15 info: -------------------------------------------
 2021-12-16 04:15:15 warn: A unit test file was not provided.
 2021-12-16 04:15:19 info: All steps were completed successfully
+2021-12-27 12:11:18 info: ----------------------------------------------
+2021-12-27 12:11:18 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2021-12-27 12:11:18 info: ----------------------------------------------
+2021-12-27 12:11:21 info: All unit tests passed.
+2021-12-27 12:11:25 info: All steps were completed successfully
+2021-12-27 12:12:01 info: -------------------------------------------
+2021-12-27 12:12:01 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2021-12-27 12:12:01 info: -------------------------------------------
+2021-12-27 12:12:04 info: All unit tests passed.
+2021-12-27 12:12:08 info: All steps were completed successfully
+2021-12-27 02:50:40 info: ------------------------------------------------
+2021-12-27 02:50:40 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2021-12-27 02:50:40 info: ------------------------------------------------
+2021-12-27 02:50:40 warn: A unit test file was not provided.
+2021-12-27 02:50:47 info: All steps were completed successfully

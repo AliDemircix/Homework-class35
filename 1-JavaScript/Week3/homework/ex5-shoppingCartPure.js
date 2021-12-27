@@ -18,15 +18,11 @@ it pure. Do the following:
 // ! Function under test
 function addToShoppingCart(arr, grocery) {
   let newCartArr = [];
-  const isAdded = arr.some(() => !grocery);
-
   if (arr !== null && grocery !== null) {
     newCartArr = [...arr];
-    if (arr.length >= 3 && !isAdded) {
+    newCartArr.push(grocery);
+    if (arr.length >= 3) {
       newCartArr.shift();
-      newCartArr.push(grocery);
-    } else if (arr.length < 3 && !isAdded) {
-      newCartArr.push(grocery);
     }
     return newCartArr;
   }

@@ -31,7 +31,7 @@ function giveCompliment(name) {
     'Crazy',
     'Bad',
   ];
-  const randomly = Math.ceil(Math.random() * 10);
+  const randomly = Math.floor(Math.random() * 10);
   return `You are ${compliments[randomly]}, ${name}!`;
 }
 
