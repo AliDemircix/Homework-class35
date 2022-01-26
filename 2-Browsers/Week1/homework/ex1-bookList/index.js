@@ -29,7 +29,7 @@ function createBookList(books) {
     './assets/the_most_human_human.jpg',
     './assets/the_pragmatic_programmer.jpg',
   ];
-  books.forEach(function (book, i) {
+  books.forEach((book, i) => {
     const { title, author, alreadyRead } = book;
     const li = document.createElement('li');
     const img = document.createElement('img');
@@ -43,9 +43,7 @@ function createBookList(books) {
       : (li.style.background = 'red');
 
     ul.appendChild(li);
-
-    //styling
-
+    //Css
     li.style.display = 'flex';
     li.style.flexDirection = 'column';
     li.style.justifyContent = 'center';

@@ -18,6 +18,4 @@ favFood.textContent = 'Pizza';
 const homeTown = document.querySelector('#hometown');
 homeTown.textContent = 'Turkey';
 const liList = document.querySelectorAll('li');
-liList.forEach(function (li) {
-  li.classList.add('list-item');
-});
+liList.forEach((li) => li.classList.add('list-item'));

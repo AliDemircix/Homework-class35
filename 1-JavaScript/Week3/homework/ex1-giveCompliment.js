@@ -44,7 +44,6 @@ function main() {
   console.log(giveCompliment(myName));
   console.log(giveCompliment(myName));
   console.log(giveCompliment(myName));
-
   const yourName = 'Amsterdam';
 
   console.log(giveCompliment(yourName));

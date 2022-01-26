@@ -546,3 +546,71 @@ Ran all test suites matching /ex3-hijackLogo.test.js/i.
 2021-12-22 11:40:47 info: --------------------------------------------
 2021-12-22 11:40:54 info: All unit tests passed.
 2021-12-22 11:40:58 info: All steps were completed successfully
+2022-01-08 04:00:39 info: ----------------------------------------
+2022-01-08 04:00:39 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-01-08 04:00:39 info: ----------------------------------------
+2022-01-08 04:00:45 info: All unit tests passed.
+2022-01-08 04:00:49 info: All steps were completed successfully
+2022-01-08 04:02:12 info: ----------------------------------------
+2022-01-08 04:02:12 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-01-08 04:02:12 info: ----------------------------------------
+2022-01-08 04:02:17 info: All unit tests passed.
+2022-01-08 04:02:19 error: *** ESLint Report ***
+
+ex1-bookList/index.js
+  32:9  warning  Results from `map` are unused. Replace `map` with `forEach`  no-restricted-syntax
+  32:9  error    Results from `map` are unused. Replace `map` with `forEach`  hyf/use-map-result
+
+✖ 2 problems (1 error, 1 warning)
+
+
+2022-01-08 04:02:39 info: ----------------------------------------
+2022-01-08 04:02:39 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-01-08 04:02:39 info: ----------------------------------------
+2022-01-08 04:02:44 info: All unit tests passed.
+2022-01-08 04:02:48 info: All steps were completed successfully
+2022-01-14 11:29:30 info: ------------------------------------------
+2022-01-14 11:29:30 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2022-01-14 11:29:30 info: ------------------------------------------
+2022-01-14 11:29:33 info: All unit tests passed.
+2022-01-14 11:29:37 info: All steps were completed successfully
+2022-01-14 11:39:58 info: ------------------------------------------
+2022-01-14 11:39:58 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2022-01-14 11:39:58 info: ------------------------------------------
+2022-01-14 11:40:01 info: All unit tests passed.
+2022-01-14 11:40:05 info: All steps were completed successfully
+2022-01-16 11:59:51 info: ---------------------------------------
+2022-01-16 11:59:51 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-01-16 11:59:51 info: ---------------------------------------
+2022-01-16 12:00:02 info: All unit tests passed.
+2022-01-16 12:00:09 info: All steps were completed successfully
+2022-01-17 07:59:02 info: ---------------------------------------
+2022-01-17 07:59:02 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-01-17 07:59:02 info: ---------------------------------------
+2022-01-17 07:59:08 info: All unit tests passed.
+2022-01-17 07:59:12 info: All steps were completed successfully
+2022-01-17 07:59:22 info: ----------------------------------------
+2022-01-17 07:59:22 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-01-17 07:59:22 info: ----------------------------------------
+2022-01-17 07:59:27 info: All unit tests passed.
+2022-01-17 07:59:31 info: All steps were completed successfully
+2022-01-17 08:00:55 info: ---------------------------------------
+2022-01-17 08:00:55 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-01-17 08:00:55 info: ---------------------------------------
+2022-01-17 08:01:00 info: All unit tests passed.
+2022-01-17 08:01:05 info: All steps were completed successfully
+2022-01-17 08:01:34 info: ------------------------------------------
+2022-01-17 08:01:34 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2022-01-17 08:01:34 info: ------------------------------------------
+2022-01-17 08:01:37 info: All unit tests passed.
+2022-01-17 08:01:41 info: All steps were completed successfully
+2022-01-17 08:01:52 info: --------------------------------------------
+2022-01-17 08:01:52 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-01-17 08:01:52 info: --------------------------------------------
+2022-01-17 08:02:00 info: All unit tests passed.
+2022-01-17 08:02:04 info: All steps were completed successfully
+2022-01-17 08:02:20 info: ---------------------------------------
+2022-01-17 08:02:20 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-01-17 08:02:20 info: ---------------------------------------
+2022-01-17 08:02:25 info: All unit tests passed.
+2022-01-17 08:02:29 info: All steps were completed successfully
