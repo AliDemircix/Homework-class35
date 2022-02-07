@@ -49,6 +49,6 @@ const hasReachedMiddleofScreen = () => {
       startMove = setInterval(catWalk, 50);
     }, 5000);
   }
-}
+};
 let startMove = setInterval(catWalk, 50);
 window.addEventListener('load', catWalk);
