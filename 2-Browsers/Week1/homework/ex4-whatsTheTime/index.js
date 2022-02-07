@@ -22,14 +22,9 @@ function addCurrentTime() {
   body.appendChild(createDiv);
   function getTime() {
     const date = new Date();
-    const hour = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
-    document.querySelector('div').textContent = `${
-      hour < 10 ? '0' + hour : hour
-    }:${minutes < 10 ? '0' + minutes : minutes}:${
-      seconds < 10 ? '0' + seconds : seconds
-    }`;
+    const time = date.toLocaleTimeString('nl-NL');
+    document.querySelector('div').textContent = `${time}`;
+    console.log(time);
   }
   setInterval(getTime, 1000);
 }

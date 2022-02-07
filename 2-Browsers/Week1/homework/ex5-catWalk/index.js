@@ -26,15 +26,21 @@ const catImageWidth = catImage.width;
 let isScreenFinished;
 function catWalk() {
   catImage.style.left = parseInt(catImage.style.left) + 10 + 'px';
+  hasReachedEndOfScreen();
+  hasReachedMiddleofScreen();
+}
+const hasReachedEndOfScreen = () => {
   if (parseInt(catImage.style.left) > screenWidth - catImageWidth) {
     catImage.style.left = '0px';
-    isScreenFinished = false;
+    return (isScreenFinished = true);
   }
+};
+const hasReachedMiddleofScreen = () => {
   if (
-    !isScreenFinished &&
+    isScreenFinished &&
     parseInt(catImage.style.left) >= (screenWidth - catImageWidth) / 2
   ) {
-    isScreenFinished = true;
+    isScreenFinished = false;
     clearInterval(startMove);
     catImage.src =
       'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
