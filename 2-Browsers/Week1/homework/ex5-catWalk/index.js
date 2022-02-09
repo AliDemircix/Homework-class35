@@ -31,21 +31,26 @@ let position = 0;
 const catWalk = () => {
   catImage.style.left = `${position}px`;
   position += 10;
-  hasReachedEndOfScreen();
-  hasReachedMiddleofScreen();
+  if (hasReachedEndOfScreen()) {
+    position = 0;
+    catImage.style.left = `${position}px`;
+    isScreenFinished = true;
+  }
+
+  if (hasReachedMiddleofScreen()) {
+    isScreenFinished = false;
+    clearInterval(startMove);
+    changeCatImg();
+  }
 };
 const hasReachedEndOfScreen = () => {
   if (position > screenWidth - catImageWidth) {
-    position = 0;
-    catImage.style.left = `${position}px`;
-    return (isScreenFinished = true);
+    return true;
   }
 };
 const hasReachedMiddleofScreen = () => {
   if (isScreenFinished && position >= (screenWidth - catImageWidth) / 2) {
-    isScreenFinished = false;
-    clearInterval(startMove);
-    changeCatImg();
+    return true;
   }
 };
 const changeCatImg = () => {
