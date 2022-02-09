@@ -16,6 +16,7 @@ function checkDoubleDigits(number) {
   return new Promise((resolve, reject) => {
     if (number < 10 || number > 99) {
       reject(new Error(`Expected a double digit number but got ${number}`));
+      return;
     }
     resolve('This is a double digit number!');
   });

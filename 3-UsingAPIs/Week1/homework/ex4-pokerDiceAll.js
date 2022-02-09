@@ -28,9 +28,7 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  const promises = dice.map((diceItem) => {
-    return rollDie(diceItem);
-  });
+  const promises = dice.map(rollDie);
   return Promise.all(promises);
 }
 
@@ -39,6 +37,8 @@ function main() {
     .then((results) => console.log('Resolved!', results))
     .catch((error) => console.log('Rejected!', error.message));
 }
+// Because of using map we got all promises as an array object. And then we call promisea.all to see results. That why
+// rejected or resolved is not important to break code block.
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
