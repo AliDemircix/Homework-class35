@@ -19,36 +19,41 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
 
+const DANCING_CAT_IMG =
+  'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+const WALKING_CAT_IMG =
+  'http://www.anniemation.com/clip_art/images/cat-walk.gif';
 const catImage = document.querySelector('img');
-catImage.style.left = '0px';
 const screenWidth = window.innerWidth;
 const catImageWidth = catImage.width;
 let isScreenFinished;
-function catWalk() {
-  catImage.style.left = parseInt(catImage.style.left) + 10 + 'px';
+let position = 0;
+const catWalk = () => {
+  catImage.style.left = `${position}px`;
+  position += 10;
   hasReachedEndOfScreen();
   hasReachedMiddleofScreen();
-}
+};
 const hasReachedEndOfScreen = () => {
-  if (parseInt(catImage.style.left) > screenWidth - catImageWidth) {
-    catImage.style.left = '0px';
+  if (position > screenWidth - catImageWidth) {
+    position = 0;
+    catImage.style.left = `${position}px`;
     return (isScreenFinished = true);
   }
 };
 const hasReachedMiddleofScreen = () => {
-  if (
-    isScreenFinished &&
-    parseInt(catImage.style.left) >= (screenWidth - catImageWidth) / 2
-  ) {
+  if (isScreenFinished && position >= (screenWidth - catImageWidth) / 2) {
     isScreenFinished = false;
     clearInterval(startMove);
-    catImage.src =
-      'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
-    setTimeout(() => {
-      catImage.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-      startMove = setInterval(catWalk, 50);
-    }, 5000);
+    changeCatImg();
   }
+};
+const changeCatImg = () => {
+  catImage.src = DANCING_CAT_IMG;
+  setTimeout(() => {
+    catImage.src = WALKING_CAT_IMG;
+    startMove = setInterval(catWalk, 50);
+  }, 5000);
 };
 let startMove = setInterval(catWalk, 50);
 window.addEventListener('load', catWalk);
