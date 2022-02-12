@@ -1,1 +1,9 @@
-/* add your styling here */
+body {
+  display: flex;
+  flex-direction: column;
+}
+button,
+select,
+img {
+  width: 150px;
+}
