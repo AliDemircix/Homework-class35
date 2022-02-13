@@ -19,13 +19,11 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
 ------------------------------------------------------------------------------*/
 const bodyDiv = document.querySelector('body');
 const requestData = async (url) => {
-  try {
-    const fetchedData = await fetch(url);
-    const fetchedJson = await fetchedData.json();
-    return renderImage(fetchedJson);
-  } catch (error) {
-    return renderError(error);
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('Failed to fetch');
   }
+  return response.json();
 };
 
 const renderImage = (data) => {
@@ -37,13 +35,18 @@ const renderImage = (data) => {
 
 const renderError = (error) => {
   const createH1Element = document.createElement('h1');
-  createH1Element.innerContent = error;
+  createH1Element.textContent = error;
   console.log(error);
   bodyDiv.appendChild(createH1Element);
 };
 
-const main = async () => {
-  await requestData('https://xkcd.now.sh/?comic=latest');
-};
+async function main() {
+  try {
+    const data = await requestData('https://xkcd.now.sh/?comic=latest');
+    renderImage(data);
+  } catch (error) {
+    renderError(error);
+  }
+}
 
 window.addEventListener('load', main);

@@ -154,3 +154,382 @@ Ran all test suites matching /ex2-pokemonApp.test.js/i.
 2022-02-13 12:26:55 info: ------------------------------------------
 2022-02-13 12:27:01 info: All unit tests passed.
 2022-02-13 12:27:04 info: All steps were completed successfully
+2022-02-13 05:52:23 info: ----------------------------------------------
+2022-02-13 05:52:23 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2022-02-13 05:52:23 info: ----------------------------------------------
+2022-02-13 05:52:28 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js
+  ex5-pokerDiceChain
+    √ should exist and be executable (1 ms)
+    × should have all TODO comments removed (2 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    × should resolve when all dice settle successfully (63 ms)
+    √ should reject with an Error when a die rolls off the table (99 ms)
+
+  ● ex5-pokerDiceChain › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 5
+    Received length: 2
+    Received array:  ["NINE", "NINE"]
+
+      33 |     const result = await promise;
+      34 |     expect(Array.isArray(result)).toBe(true);
+    > 35 |     expect(result).toHaveLength(5);
+         |                    ^
+      36 |
+      37 |     promise.finally(() => {
+      38 |       randomSpy.mockRestore();
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:35:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        1.125 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+2022-02-13 05:52:48 info: ---------------------------------------------
+2022-02-13 05:52:48 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-02-13 05:52:48 info: ---------------------------------------------
+2022-02-13 05:52:56 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js
+  programmerFun
+    √ HTML should be syntactically valid (149 ms)
+    √ should have all TODO comments removed
+    √ should use `fetch()` (1 ms)
+    × should use async/wait (1 ms)
+    √ should use try/catch (1 ms)
+
+  ● programmerFun › should use async/wait
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      52 |
+      53 |   test('should use async/wait', () => {
+    > 54 |     expect(state.async).toBeDefined();
+         |                         ^
+      55 |     expect(state.await).toBeDefined();
+      56 |   });
+      57 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:54:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        4.221 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+Jest did not exit one second after the test run has completed.
+
+This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
+2022-02-13 05:53:46 info: ---------------------------------------------
+2022-02-13 05:53:46 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-02-13 05:53:46 info: ---------------------------------------------
+2022-02-13 05:53:52 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js
+  programmerFun
+    √ HTML should be syntactically valid (134 ms)
+    √ should have all TODO comments removed
+    √ should use `fetch()` (1 ms)
+    × should use async/wait (1 ms)
+    √ should use try/catch
+
+  ● programmerFun › should use async/wait
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      52 |
+      53 |   test('should use async/wait', () => {
+    > 54 |     expect(state.async).toBeDefined();
+         |                         ^
+      55 |     expect(state.await).toBeDefined();
+      56 |   });
+      57 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:54:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.612 s, estimated 5 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+2022-02-13 05:58:07 info: ---------------------------------------------
+2022-02-13 05:58:07 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-02-13 05:58:07 info: ---------------------------------------------
+2022-02-13 05:58:14 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js
+  programmerFun
+    √ HTML should be syntactically valid (122 ms)
+    √ should have all TODO comments removed
+    √ should use `fetch()`
+    × should use async/wait (2 ms)
+    √ should use try/catch
+
+  ● programmerFun › should use async/wait
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      52 |
+      53 |   test('should use async/wait', () => {
+    > 54 |     expect(state.async).toBeDefined();
+         |                         ^
+      55 |     expect(state.await).toBeDefined();
+      56 |   });
+      57 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:54:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.734 s, estimated 4 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+2022-02-13 05:58:48 info: ---------------------------------------------
+2022-02-13 05:58:48 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-02-13 05:58:48 info: ---------------------------------------------
+2022-02-13 05:58:56 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js
+  programmerFun
+    √ HTML should be syntactically valid (129 ms)
+    √ should have all TODO comments removed
+    √ should use `fetch()`
+    × should use async/wait (1 ms)
+    √ should use try/catch
+
+  ● programmerFun › should use async/wait
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      52 |
+      53 |   test('should use async/wait', () => {
+    > 54 |     expect(state.async).toBeDefined();
+         |                         ^
+      55 |     expect(state.await).toBeDefined();
+      56 |   });
+      57 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:54:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.799 s, estimated 4 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+2022-02-13 06:08:09 info: ---------------------------------------------
+2022-02-13 06:08:09 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-02-13 06:08:09 info: ---------------------------------------------
+2022-02-13 06:08:16 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js
+  programmerFun
+    √ HTML should be syntactically valid (170 ms)
+    √ should have all TODO comments removed
+    √ should use `fetch()`
+    × should use async/wait (1 ms)
+    √ should use try/catch (1 ms)
+
+  ● programmerFun › should use async/wait
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      52 |
+      53 |   test('should use async/wait', () => {
+    > 54 |     expect(state.async).toBeDefined();
+         |                         ^
+      55 |     expect(state.await).toBeDefined();
+      56 |   });
+      57 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:54:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.865 s, estimated 4 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+2022-02-13 06:09:04 info: ---------------------------------------------
+2022-02-13 06:09:04 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-02-13 06:09:04 info: ---------------------------------------------
+2022-02-13 06:09:11 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js
+  programmerFun
+    √ HTML should be syntactically valid (128 ms)
+    √ should have all TODO comments removed
+    √ should use `fetch()`
+    × should use async/wait (1 ms)
+    √ should use try/catch
+
+  ● programmerFun › should use async/wait
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      52 |
+      53 |   test('should use async/wait', () => {
+    > 54 |     expect(state.async).toBeDefined();
+         |                         ^
+      55 |     expect(state.await).toBeDefined();
+      56 |   });
+      57 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:54:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.793 s, estimated 4 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+2022-02-13 06:10:25 info: ---------------------------------------------
+2022-02-13 06:10:25 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-02-13 06:10:25 info: ---------------------------------------------
+2022-02-13 06:10:32 info: All unit tests passed.
+2022-02-13 06:10:38 info: All steps were completed successfully
+2022-02-13 08:00:17 info: -----------------------------------------
+2022-02-13 08:00:17 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2022-02-13 08:00:17 info: -----------------------------------------
+2022-02-13 08:00:21 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDieUntil` should not contain unneeded console.log calls
+    √ should not include a recursive call
+    √ should use async/wait
+    √ should use try/catch (1 ms)
+    × should resolve as soon as a die settles on an ACE (16 ms)
+    √ should reject with an Error when a die rolls off the table (8 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    Die 1 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout._onTimeout (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      66 |
+      67 |   test('should resolve as soon as a die settles on an ACE', async () => {
+    > 68 |     expect.assertions(3);
+         |            ^
+      69 |
+      70 |     expect(exported).toBeDefined();
+      71 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:68:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.742 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2022-02-13 08:01:13 info: -----------------------------------------
+2022-02-13 08:01:13 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2022-02-13 08:01:13 info: -----------------------------------------
+2022-02-13 08:01:16 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDieUntil` should not contain unneeded console.log calls
+    √ should not include a recursive call
+    √ should use async/wait
+    √ should use try/catch (1 ms)
+    × should resolve as soon as a die settles on an ACE (158 ms)
+    √ should reject with an Error when a die rolls off the table (120 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    Die 1 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout._onTimeout (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.895 s, estimated 1 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2022-02-13 08:02:33 info: -----------------------------------------
+2022-02-13 08:02:33 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2022-02-13 08:02:33 info: -----------------------------------------
+2022-02-13 08:02:36 info: All unit tests passed.
+2022-02-13 08:02:40 info: All steps were completed successfully
+2022-02-13 08:11:22 info: ----------------------------------------
+2022-02-13 08:11:22 info: >>> Running Unit Test `ex4-diceRace` <<<
+2022-02-13 08:11:22 info: ----------------------------------------
+2022-02-13 08:11:25 info: All unit tests passed.
+2022-02-13 08:11:29 info: All steps were completed successfully
+2022-02-13 08:17:14 info: ----------------------------------------
+2022-02-13 08:17:14 info: >>> Running Unit Test `ex4-diceRace` <<<
+2022-02-13 08:17:14 info: ----------------------------------------
+2022-02-13 08:17:17 info: All unit tests passed.
+2022-02-13 08:17:21 info: All steps were completed successfully
+2022-02-13 08:22:14 info: ----------------------------------------
+2022-02-13 08:22:14 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2022-02-13 08:22:14 info: ----------------------------------------
+2022-02-13 08:22:14 warn: A unit test file was not provided.
+2022-02-13 08:22:18 info: All steps were completed successfully
