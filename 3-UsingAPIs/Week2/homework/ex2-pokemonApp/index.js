@@ -39,16 +39,11 @@ const createSelection = (pokemonNames) => {
 };
 
 const fetchData = async (url) => {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response failed!`);
-    }
-    return response.json();
-  } catch (error) {
-    console.log(error.message);
-    throw error;
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Response failed!`);
   }
+  return response.json();
 };
 
 const fetchAndPopulatePokemons = async () => {
