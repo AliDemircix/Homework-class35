@@ -17,7 +17,7 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
    url with `.shx`. There is no server at the modified url, therefore this 
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
-const bodyDiv = document.querySelector('body');
+
 const requestData = async (url) => {
   const response = await fetch(url);
   if (!response.ok) {
@@ -27,17 +27,17 @@ const requestData = async (url) => {
 };
 
 const renderImage = (data) => {
-  const createImgElement = document.createElement('img');
-  createImgElement.setAttribute('alt', 'img');
-  createImgElement.src = data.img;
-  bodyDiv.appendChild(createImgElement);
+  const imgElement = document.createElement('img');
+  imgElement.setAttribute('alt', data.alt);
+  imgElement.src = data.img;
+  document.body.appendChild(imgElement);
 };
 
 const renderError = (error) => {
-  const createH1Element = document.createElement('h1');
-  createH1Element.textContent = error;
+  const h1Element = document.createElement('h1');
+  h1Element.textContent = error;
   console.log(error);
-  bodyDiv.appendChild(createH1Element);
+  document.body.appendChild(h1Element);
 };
 
 async function main() {

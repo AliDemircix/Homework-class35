@@ -22,21 +22,6 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-const bodyDiv = document.querySelector('body');
-
-const createSelection = (pokemonNames) => {
-  const selectElement = document.createElement('select');
-  selectElement.addEventListener('change', () => {
-    fetchImage(selectElement.value);
-  });
-  pokemonNames.forEach((pokemonName) => {
-    const optionElement = document.createElement('option');
-    optionElement.text = pokemonName;
-    optionElement.value = pokemonName;
-    selectElement.appendChild(optionElement);
-    bodyDiv.appendChild(selectElement);
-  });
-};
 
 const fetchData = async (url) => {
   const response = await fetch(url);
@@ -50,27 +35,31 @@ const fetchAndPopulatePokemons = async () => {
   try {
     const API_URL = 'https://pokeapi.co/api/v2/pokemon?offset=151&limit=151';
     const pokemonData = await fetchData(API_URL);
-    const pokemonNames = [];
+    const selectElement = document.createElement('select');
     pokemonData.results.forEach((pokemon) => {
-      pokemonNames.push(pokemon.name);
+      const optionElement = document.createElement('option');
+      optionElement.text = pokemon.name;
+      optionElement.value = pokemon.url;
+      selectElement.appendChild(optionElement);
     });
-    createSelection(pokemonNames);
+    document.body.appendChild(selectElement);
+    selectElement.addEventListener('change', () =>
+      fetchImage(selectElement.value)
+    );
   } catch (error) {
     console.log(error);
   }
 };
 
-const fetchImage = async (pokemonName) => {
+const fetchImage = async (pokemonUrl) => {
   try {
-    const API_URL = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
-    const pokemonImg = await fetchData(API_URL);
-    if (document.querySelector('img')) {
-      bodyDiv.removeChild(document.querySelector('img'));
+    const pokemonImg = await fetchData(pokemonUrl);
+    let imgElement = document.querySelector('img');
+    if (!imgElement) {
+      imgElement = document.createElement('img');
+      document.body.appendChild(imgElement);
     }
-    const createImgElement = document.createElement('img');
-    createImgElement.src = pokemonImg.sprites.front_default;
-    bodyDiv.appendChild(createImgElement);
-    console.log(pokemonImg.sprites.front_default);
+    imgElement.src = pokemonImg.sprites.front_default;
   } catch (error) {
     console.log(error);
   }
@@ -80,7 +69,7 @@ const main = () => {
   const buttonElement = document.createElement('button');
   buttonElement.type = 'submit';
   buttonElement.textContent = 'Get Pokemon!';
-  bodyDiv.appendChild(buttonElement);
+  document.body.appendChild(buttonElement);
   buttonElement.addEventListener('click', () => {
     fetchAndPopulatePokemons();
     buttonElement.disabled = true;
